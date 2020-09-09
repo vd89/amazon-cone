@@ -3,7 +3,7 @@
 import React from 'react';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
-
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 const Header = () => {
   return (
     <div className='header'>
@@ -16,7 +16,7 @@ const Header = () => {
         <input type='text' className='header__searchInput' />
         <SearchIcon className='header__searchIcon' />
       </div>
-      <div className='header__nave'>
+      <div className='header__nav'>
         <div className='header__option'>
           <span className='header__optionLineOne'>Hello Dax</span>
           <span className='header__optionLineTwo'>Sign In</span>
@@ -29,8 +29,11 @@ const Header = () => {
           <span className='header__optionLineOne'>Your</span>
           <span className='header__optionLineTwo'>Prime</span>
         </div>
+        <div className='header__optionBasket'>
+          <ShoppingBasketIcon />
+          <span className='header__optionLineTwo header__basketCount'>0</span>
+        </div>
       </div>
-      <h1>Hello from header</h1>
     </div>
   );
 };
